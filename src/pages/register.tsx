@@ -1,4 +1,6 @@
+import { Register } from "../components/register";
+
 export function Registerpage() {
 	return(
-        <div>Register Page</div>
+        <Register/>
     )}
