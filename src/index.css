@@ -9,7 +9,10 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif ,'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', -apple-system, BlinkMacSystemFont ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -141,3 +144,14 @@ h3 {
     font-size: 1.7rem;
   }
 }
+/*------------------------------------- General ------------------------------------------------------------*/
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.home-page{
+  display:grid;
+  grid-template-columns:30% 40% 30%
+
+}
+
