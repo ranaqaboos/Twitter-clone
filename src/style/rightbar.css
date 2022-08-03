@@ -6,7 +6,7 @@
   .right-input{
     display: flex;
     align-items: center;
-    background-color: var(--twitter-background);
+    background-color: #e6ecf0;
     padding: 10px;
     border-radius: 20px;
     margin-top: 10px;
@@ -17,7 +17,7 @@
   
   .right-input > input {
     border: none;
-    background-color: var(--twitter-background);
+    background-color: #e6ecf0;
   }
   
   .right-input-searchIcon {
