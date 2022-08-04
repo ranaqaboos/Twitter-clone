@@ -9,12 +9,12 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif ,'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: 'Lato', sans-serif ,'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', -apple-system, BlinkMacSystemFont ;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale; */
+  /* min-height: 100vh;
+  overflow-x: hidden; */
 }
 
 .container {
@@ -24,10 +24,11 @@ body {
   flex-wrap: wrap;
 }
 
-.image {
+.imagee {
   height: 100%;
   background: url('/public/cover-img.png') center center/cover;
   flex: 0 1 53vw;
+  width: 100vw;
   position: relative;
 }
 
@@ -104,7 +105,7 @@ h3 {
     margin: 0 auto;
   }
 
-  .image {
+  .imagee {
     height: 50vh;
     flex:  0 1 100vw;
   }
@@ -146,12 +147,15 @@ h3 {
 }
 /*------------------------------------- General ------------------------------------------------------------*/
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }
-.home-page{
-  display:grid;
-  grid-template-columns:30% 40% 30%
+/* .home-page{
+  display:flex;
 
-}
+  flex: 1;
+  justify-content: center;
+gap: 2rem;
+
+} */
 

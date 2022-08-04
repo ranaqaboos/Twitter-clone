@@ -1,42 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar{
+position: sticky;
+}
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+/*  */
+.sidebarOption {
+  position: sticky;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebarOption .material-icons,
+.fa-twitter {
+  padding: 20px;
+}
+
+.sidebarOption h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebarOption:hover {
+  background-color: var(--twitter-background);
+  border-radius: 30px;
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+.sidebarOption.active {
+  color: var(--twitter-color);
+}
+
+.sidebar__tweet {
+  width: 100%;
+  background-color: var(--twitter-color);
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+/* body {
+
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+} */
+
 .sidebar {
-    border-right: 1px solid #50b7f5;
-    flex: 0.3;
-    /* min-width: 250px; */
-    margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: sticky;
-    /* -webkit-box-flex: 1;
-    flex-grow: 1 */
-  }
-  
-  .sidebar__twitterIcon {
-    position: sticky;
-    color: #50b7f5;
-    font-size: 30px !important;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar__tweet {
-    position: sticky;
-    background-color:#50b7f5 !important;
-    border: none !important;
-    color: white !important;
-    font-weight: 900 !important;
-    text-transform: inherit !important;
-    border-radius: 30px !important;
-    height: 50px !important;
-    margin-top: 20px !important;
-  }
-  .right-Container{
-    margin-top: 15px;
-    margin-left: 20px;
-    padding: 20px;
-    background-color: #f5f8fa;
-    border-radius: 20px;
-  }
-  .right-Container > h2 {
-    font-size: 18px;
-    font-weight: 800;
-  }
+
+  flex: 0.2;
+
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fa-twitter {
+  color: var(--twitter-color);
+  font-size: 30px;
+}
+.links{
+  text-decoration: none;
+  color: black;
+}
+.links:hover{
+  background-color: var(--twitter-background);
+  border-radius: 30px;
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}

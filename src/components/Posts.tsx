@@ -1,12 +1,12 @@
 import { posts } from "../data";
-import { Postt } from "./Post";
+// import { Postt } from "./Post";
 
 
 
 export function Posts(){
-const postnew = posts.map((post) => <Postt post={post}/>);
+// const postnew = posts.map((post) => <Postt post={post}/>);
 return <div>
-    {postnew}
+    {/* {postnew} */}
    
 </div>
 

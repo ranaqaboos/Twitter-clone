@@ -13,6 +13,9 @@
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    border: 1px #d4d4d4 solid;
+ 
+
    
 }
 .box, .box button{
@@ -65,14 +68,30 @@
     border: 1px solid #00acee;
 }
 .box-two .next-btn{
+    
     background-color: #121212;
     color: #fff;
+    cursor: pointer;
 }
-.container p{
+.next-btn:hover{
+    background: #110f0f;
+    
+}
+/* .container p{
     font-size: .7rem;
     color: rgb(138, 136, 136);
 }
 .container p a{
     text-decoration: none;
     color: #00acee;
+} */
+.signup{
+    text-decoration: none;
+    color: rgb(29 155 240);
+    font-family: inherit;
+
+}
+#linkss{
+    text-decoration: none;
+    color: white;
 }
