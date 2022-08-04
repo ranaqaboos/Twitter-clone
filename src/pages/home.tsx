@@ -4,6 +4,9 @@ import Rightbar from "../components/Rightbar";
 import Sidebar from "../components/Sidebar";
 import '../style/home.css'
 import '../index.css'
+import '../style/feed.css'
+import { Posts } from "../components/Posts";
+import { Feed } from "../components/feed";
 export function Homepage() {
 
     
@@ -11,7 +14,10 @@ export function Homepage() {
     <div className="home-page">
         
       <Sidebar/>
-       <Post/>
+      <div className='feed'>
+      <Feed/>
+       <Posts/>
+      </div>
        <Rightbar/>
     </div>
     </>
