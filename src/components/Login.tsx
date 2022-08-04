@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import '../style/login.css'
 export function Login() {
 	return (
         
         <div className="lgn-container">
         <div className="box box-one">
-            <i className="fab fa-twitter"><img src="https://img.icons8.com/color/50/000000/twitter--v1.png"/></i>
+            <i className="fab fa-twitter"></i>
             <button>
                <img src="/google.png" alt="google" width={19}/>
                 <span>Sign in with Google</span>
@@ -19,9 +20,10 @@ export function Login() {
             <form>
                 <input type="text" placeholder="Phone,email, or username"/>
             </form>
-            <button className="next-btn">Next</button>
+           <Link id='linkss' to={'/home'}> <button className="next-btn"> Next</button></Link>
             <button>Forget password</button>
         </div>
-        <p>Don't have an account <a href="#">Sign Up</a></p>
+        <p>Don't have an account   <a className='signup' href="#">Sign Up</a></p>
+      
     </div>
     )}

@@ -1,8 +1,9 @@
-import { Navbar } from "../components/Navbar";
-import { Posts } from "../components/Posts";
+
+import { Post } from "../components/Post";
 import Rightbar from "../components/Rightbar";
 import Sidebar from "../components/Sidebar";
-
+import '../style/home.css'
+import '../index.css'
 export function Homepage() {
 
     
@@ -10,7 +11,7 @@ export function Homepage() {
     <div className="home-page">
         
       <Sidebar/>
-       <Posts/>
+       <Post/>
        <Rightbar/>
     </div>
     </>

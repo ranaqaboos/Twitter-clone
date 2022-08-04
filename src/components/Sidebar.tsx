@@ -1,35 +1,53 @@
-import TwitterIcon from "@material-ui/icons/Twitter";
-import SidebarOption from "./SidebarOption";
-import HomeIcon from "@material-ui/icons/Home";
-import SearchIcon from "@material-ui/icons/Search";
-import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import PermIdentityIcon from "@material-ui/icons/PermIdentity";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import { Button } from "@material-ui/core";
+
+import { Link } from 'react-router-dom';
 import '../style/sidebar.css'
-import { Link } from "react-router-dom";
+
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <TwitterIcon className="sidebar__twitterIcon" />
-      <Link  to={"/home"}><SidebarOption active Icon={HomeIcon} text="Home" /></Link>
-      <SidebarOption Icon={SearchIcon} text="Explore" />
-      <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
-      <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-      <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" />
-      <SidebarOption Icon={ListAltIcon} text="Lists" />
-      <Link to={"/profile"}><SidebarOption Icon={PermIdentityIcon} text="Profile" /></Link>
-      <SidebarOption Icon={MoreHorizIcon} text="More" />
-
-      {/* Button -> Tweet */}
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Tweet
-      </Button>
+    <i className="fab fa-twitter"></i>
+    <div className="sidebarOption active">
+      <span className="material-icons"> home </span>
+     <h2> <Link className='links' to={'/home'}>Home</Link></h2>
     </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> search </span>
+      <h2>Explore</h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> notifications_none </span>
+      <h2>Notifications</h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> mail_outline </span>
+      <h2>Messages</h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> bookmark_border </span>
+      <h2>Bookmarks</h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> list_alt </span>
+      <h2>Lists</h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> perm_identity </span>
+     <h2> <Link className='links' to={'/profile'}>Profile</Link></h2>
+    </div>
+
+    <div className="sidebarOption">
+      <span className="material-icons"> more_horiz </span>
+      <h2>More</h2>
+    </div>
+    <button className="sidebar__tweet">Tweet</button>
+  </div>
   );
 }
 
