@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Main: React.FC = () => {
-  const { name, user, tweetsCount, bio, id } = useSelector(
+  const { name, user, tweetsCount, bio, id ,avatar} = useSelector(
     (state: any) => state.currentUser
   );
   console.log('🚀 ~ currentUser', { name, user, tweetsCount });
@@ -36,7 +36,7 @@ const Main: React.FC = () => {
         </ProfileInfo>
       </Header>
 
-      <ProfilePage name={name} user={user} bio={bio} id={id} />
+      <ProfilePage avatar={avatar} name={name} user={user} bio={bio} id={id} />
 
       <BottomMenu>
         <HomeIcon />
