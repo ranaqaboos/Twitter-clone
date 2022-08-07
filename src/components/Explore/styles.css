@@ -1,0 +1,34 @@
+.tabs {
+    align-items: stretch;
+    font-weight: 700;
+    font-size: 15px;
+    color: gray;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .tabs > div {
+    flex-grow: 1;
+    text-align: center;
+  
+    padding: 18px;
+  
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+  
+    background-color: rgba(var(--accent-color-rbg), 0);
+  }
+  
+  .tabs > div:hover {
+    color: gray;
+    background-color: rgba(var(--accent-color-rgb), 0.1);
+  }
+  
+  .selected {
+    color: gray;
+    border-bottom: 3px solid var(--accent-color);
+  }
+  .SearchWrapper{
+
+  }
