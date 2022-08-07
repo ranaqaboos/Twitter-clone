@@ -17,14 +17,14 @@ const ProfilePage: React.FC<{
   user: string;
   bio: string;
   id: string;
-}> = ({ name, user, bio, id}) => {
-  console.log('🚀 ~ bio', bio);
+  avatar: string;
+}> = ({ name, user, bio, id, avatar }) => {
+  console.log("🚀 ~ bio", bio);
 
   return (
     <Container>
-      <Banner>
-        <Avatar/>
-      </Banner>
+    <Banner>{avatar ? <Avatar src={avatar} /> : <Avatar />}</Banner>
+
 
       <ProfileData>
         <EditButton outlined> Edit Profile</EditButton>
