@@ -1,25 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import './index.css';
-import { Explorepage } from './pages/explore';
-import { Homepage } from './pages/home';
-import { Loginpage } from './pages/login';
-import { Profilepage } from './pages/profile';
-import { Registerpage } from './pages/register';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { store, persistor } from './store/store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-	<BrowserRouter>
-		<Routes>
-		<Route path='/' element={<Registerpage />} />
-		<Route path='/login' element={<Loginpage />} />
-		<Route path='/home' element={<Homepage />} />
-		<Route path='/profile' element={<Profilepage />} />
-       <Route path='/explore' element={<Explorepage />} />
-	   </Routes>
-	</BrowserRouter>
-);
+import App from './App';
+import Home from './components/Home';
+import Main from './components/Main';
+import { Login } from './components/Auth/components/Login';
+import { Register } from './components/Auth/components/Register';
+import Explore from './components/Explore';
 
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/profile" element={<Main />} />
+              <Route path="/explore" element={<Explore />} />
+            </Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Register />} />
+
+            <Route path="*" element={<h1>Error 404</h1>} />
+          </Routes>
+        </Router>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
